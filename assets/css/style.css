@@ -1,0 +1,139 @@
+@font-face {
+    font-family: 'Inter Regular';
+    src: url('../fonts/static/Inter-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter SemiBold';
+    src: url('../fonts/static/Inter-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Inter Bold';
+    src: url('../fonts/static/Inter-Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Inter Bold', sans-serif;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    background-color: #141414;
+    color: #ffffff;
+    font-size: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+img
+{
+  max-width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 12px 0px;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html:focus-within {
+  scroll-behavior: smooth;
+}
+/*
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}*/
+
+.card-profile{
+    background-color: #1f1f1f;
+    width: 20.44rem;
+    height: 36.19rem;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.profile-data strong, .profile-data span{
+    display: block;
+}
+
+.profile-data strong{
+    font-family: 'Inter SemiBold', sans-serif;
+    font-size: 1.5rem;
+    line-height: 150%;
+}
+
+.profile-data span{
+    color: #C4F82A;
+    font-size: 0.875rem;
+}
+
+.profile-data p{
+    margin-top: 24px;
+    margin-bottom: 24px;
+    font-family: 'Inter Regular',sans-serif;
+    font-size: 0.875rem;
+}
+
+.profile-presentation img{
+    width: 88px;
+    height: 88px;
+    border-radius: 999px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+
+nav ul{
+    padding: 0 40px 40px 40px;
+}
+
+nav ul li{
+    font-size: 0.875rem;
+    background-color: #333333;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    transition: 0.8s;
+}
+
+nav ul li:hover{
+    background-color: #C4F82A;
+    color: #333333;
+}
+
+@media screen and (min-width: 48rem) {
+    .card-profile{
+        width: 24rem;
+        height: 38.18rem;
+    }
+    .profile-presentation img{
+        margin-top: 40px;
+    }
+}
