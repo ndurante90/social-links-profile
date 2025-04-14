@@ -25,7 +25,7 @@
       </div>
       <nav>
         <ul>
-          <li><a href="#">GitHub</a></li>
+          <li tabindex="0"><a href="#">GitHub</a></li>
           <li><a href="#">Frontend Mentor</a></li>
           <li><a href="#">LinkedIn</a></li>
           <li><a href="#">Twitter</a></li>
@@ -33,5 +33,40 @@
         </ul>
       </nav>
     </main>
+    <script>
+      document.addEventListener("keydown", (e) => {
+        //get keycode
+        let keyCode = e.keyCode;
+        let elements = document.querySelectorAll("nav  ul  li");
+        let elArr = [...elements];
+
+        //get current index hovered element
+        let currentElementIndex = elArr.findIndex((el) =>
+          el.classList.contains("hover")
+        );
+
+        if (keyCode == 40) {
+          //if no focus set on first element
+          if (currentElementIndex == -1) {
+            elArr[0].classList = "hover";
+          }
+
+          if (
+            currentElementIndex > -1 &&
+            currentElementIndex < elArr.length - 1
+          ) {
+            elArr[currentElementIndex].classList = "";
+            elArr[currentElementIndex + 1].classList = "hover";
+          }
+        }
+
+        if (keyCode == 38 && currentElementIndex > -1) {
+          if (currentElementIndex > 0) {
+            elArr[currentElementIndex].classList = "";
+            elArr[currentElementIndex - 1].classList = "hover";
+          }
+        }
+      });
+    </script>
   </body>
 </html>

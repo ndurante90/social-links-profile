@@ -123,7 +123,7 @@ nav ul li{
     transition: 0.8s;
 }
 
-nav ul li:hover{
+nav ul li:hover, .hover{
     background-color: #C4F82A;
     color: #333333;
 }
